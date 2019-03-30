@@ -20,4 +20,4 @@ if __name__ == '__main__':
     y = [1, 2, 3, 4]
     axes = my_plot.plot(0, 0, x, y)
     plt.show()
-
+...
