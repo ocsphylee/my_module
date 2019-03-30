@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
-
+"""
+h
+"""
 
 class my_plot:
     def __init__(self, nrows=1, ncols=1):
@@ -18,3 +20,4 @@ if __name__ == '__main__':
     y = [1, 2, 3, 4]
     axes = my_plot.plot(0, 0, x, y)
     plt.show()
+
