@@ -19,22 +19,22 @@ def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
     label = np.array(data.iloc[:, 0])
     x = np.array(data.iloc[:, 1]) * 100
     y = np.array(data.iloc[:, 2]) * 100
-    size = np.array(data.iloc[:, 3])
+    size = np.array(data.iloc[:, 3]) / modify
     # set limit
     if 'ylim' in kwargs.keys():
-        lim = kwargs['ylim']
-        plt.ylim((lim[0], lim[1]))
+        y_lim = kwargs['ylim']
+        plt.ylim((y_lim[0], y_lim[1]))
     if 'xlim' in kwargs.keys():
-        lim = kwargs['ylim']
-        plt.xlim((lim[0], lim[1]))
+        x_lim = kwargs['xlim']
+        plt.xlim((x_lim[0], x_lim[1]))
 
     n = x.shape[0]
     for i in range(n):
-        ax.scatter(x[i], y[i], s=size[i] / modify, c=sns.color_palette("hls", n)[i],
+        ax.scatter(x[i], y[i], s=size[i],cmap="tab20b",
                    alpha=0.8, edgecolors='white')
-        plt.scatter(x[i], y[i], c=sns.color_palette("hls", n)[i], alpha=0.8, s=100,
-                    edgecolors=sns.color_palette("hls", n)[i], label=label[i])
-        plt.legend(loc=0, fontsize=fontsize)
+        plt.scatter(x[i], y[i], cmap="tab20b", alpha=0.6, s=100, label=label[i])
+
+    plt.legend(loc=0, fontsize=11,)
 
     # set stick
     name = data.columns.values.tolist()
@@ -43,10 +43,12 @@ def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
 
     if percentage:
         # show in percentage
-        fmt = '%2.0f%%'
-        yticks = mtick.FormatStrFormatter(fmt)
-        ax.yaxis.set_major_formatter(yticks)
-        ax.xaxis.set_major_formatter(yticks)
+        fmt_x = '%2.0f%%'
+        fmt_y = '%2.0f%%'
+        y_ticks = mtick.FormatStrFormatter(fmt_y)
+        ax.yaxis.set_major_formatter(y_ticks)
+        x_ticks = mtick.FormatStrFormatter(fmt_x)
+        ax.xaxis.set_major_formatter(x_ticks)
 
     ax.spines['top'].set_visible(False)  # 去掉上边框
     ax.spines['right'].set_visible(False)  # 去掉左边框
@@ -54,12 +56,14 @@ def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
 
 if __name__ == '__main__':
     # load data
-    path = "C:/Users/ASUS/Desktop/files/data/医药保健.xlsx"
+    path = "C:/Users/ASUS/Desktop/data/4.10"
+    filename = "/品类.xlsx"
     # initialize picture
     fig, ax = plt.subplots(figsize=(9, 6))
     mpl.rcParams['font.sans-serif'] = ['KaiTi']
 
     # plot
-    bubles(path, modify=5000, fontsize=15)
-    # plt.savefig('./test2.jpg', dpi=300)
+    bubles(path+filename, modify=5000000, fontsize=15,xlim = (0, 30), ylim = (-25, 70))
+
     plt.show()
+
