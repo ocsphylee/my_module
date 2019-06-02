@@ -14,8 +14,8 @@ import matplotlib as mpl
 import matplotlib.ticker as mtick
 
 
-def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
-    data = pd.read_excel(path, header=0)
+def bubles(path, sheet=None,modify=1000000, fontsize=15, percentage=True, **kwargs):
+    data = pd.read_excel(path, sheet_name=sheet,header=0)
     label = np.array(data.iloc[:, 0])
     x = np.array(data.iloc[:, 1]) * 100
     y = np.array(data.iloc[:, 2]) * 100
@@ -44,7 +44,7 @@ def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
 
     if percentage:
         # show in percentage
-        fmt_x = '%2.0f%%'
+        fmt_x = '%2.2f%%'
         fmt_y = '%2.0f%%'
         y_ticks = mtick.FormatStrFormatter(fmt_y)
         ax.yaxis.set_major_formatter(y_ticks)
@@ -57,14 +57,16 @@ def bubles(path, modify=1000000, fontsize=15, percentage=True, **kwargs):
 
 if __name__ == '__main__':
     # initialize picture
-    fig, ax = plt.subplots(figsize=(9, 6))
+    fig, ax = plt.subplots(figsize=(12, 6))
     mpl.rcParams['font.sans-serif'] = ['KaiTi']
 
     # load data
-    path = "C:/Users/ASUS/Desktop/data/4.10/"
-    filename = "品类"
+    path = "E:\my_modules\data\data_report\\"
+    filename = "cat_bubble"
 
     # plot
-    bubles(path + filename + ".xlsx", modify=5000000, fontsize=15, xlim=(0, 30), ylim=(-25, 70))
-    plt.savefig(path + filename + '.jpg', dpi=300)
+    name = '家用电器'
+    bubles(path + filename + ".xlsx",sheet = name, modify=0.0008, fontsize=15,xlim=(-0.25,15),ylim=(-80,450))
+    plt.savefig(path + filename + name +'.png', dpi=300)
     plt.show()
+
