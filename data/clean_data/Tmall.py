@@ -151,6 +151,9 @@ def save_cat_sheet(df, path, name):
     writer.close()
 
 
+
+
+
 def save_brand(cat, path, cat_path, gmv, sales, atv, gmv_g, sales_g, atv_g):
     '''保存品牌数据
     input: cat（str）: 需要整理的品类的名称
@@ -183,12 +186,69 @@ def save_brand(cat, path, cat_path, gmv, sales, atv, gmv_g, sales_g, atv_g):
     writer.save()
     writer.close()
 
+def format_data(brand_path, cat_path,cat_name_path,bubblepath,catlist,plat,date,unit,bubble = True):
+
+    cat_gmv, cat_sales, cat_atv = load_data(
+        cat_path, index='dt', growpby=[
+            'dt', 'cid1_name'], unit=unit)
+    gmv, sales, atv = load_data(
+        brand_path, index='dt', growpby=[
+            'dt', 'main_brand_name'], unit=unit)
+    print("----导入数据----")
+
+    # 2. 计算增长率
+    gmv_g = yoy_growth(gmv, "M")
+    sales_g= yoy_growth(sales, "M")
+    atv_g = yoy_growth(atv, "M")
+    print("----增长率----")
+
+    # 3. 保存品类数据
+    save_cat_sheet(cat_gmv, cat_path, 'gmv')
+    save_cat_sheet(cat_sales, cat_path, 'sales')
+    save_cat_sheet(cat_atv, cat_path, 'atv')
+    print("----品类----")
+
+    # 4. 保存品牌数据
+    for cat in catlist:
+        save_brand(
+            cat,
+            brand_path,
+            cat_name_path,
+            gmv,
+            sales,
+            atv,
+            gmv_g,
+            sales_g,
+            atv_g)
+    print("----品牌----")
+    # 5. 保存泡泡图格式数据
+
+    if bubble:
+        save_bubble(
+            gmv,
+            cat_gmv,
+            cat_name_path,
+            catlist,
+            date,
+            bubblepath,
+            plat)
+    print("----完成----")
 
 # * 运行
 if __name__ == '__main__':
 
     unit = 100000000
-    date = '2019-04-01'
+    date = '2019-05-01'
+    brand_path_T = "./JD/JD_brands.xlsx"
+    cat_path_T = './JD/JD_cats.xlsx'
+    catlist_T = ['医药保健', '酒类', '大家电', '小家电', '美妆个护', '服装鞋包']
+    catlist_D = ['医药保健', '酒类', '大家电', '小家电', '食品饮料及生鲜']
+    cat_name_path_T = './JD/JD_catalog.xlsx'
+    bubblepath_T = 'bubble_data_JD.xlsx'
+    plat_T = "./JD/"
+    format_data(brand_path_T, cat_path_T, cat_name_path_T, bubblepath_T, catlist_D, plat_T,date,unit)
+
+
 
     ''' 处理天猫数据'''
     '''
@@ -241,6 +301,7 @@ if __name__ == '__main__':
     '''
     '''--------------------------------------------------------------'''
     '''处理京东数据'''
+    '''
     # 1.导入品类和品牌的原始数据
     brand_path_D = "./JD/JD_brands.xlsx"
     cat_path_D = './JD/JD_cats.xlsx'
@@ -287,3 +348,4 @@ if __name__ == '__main__':
         date,
         bubblepath_D,
         "./JD/")
+    '''

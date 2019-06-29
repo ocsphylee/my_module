@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce3b35f8-47b3-41f7-9900-6d3464e3dc17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tmall_cat.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall_cat.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brand_catalog.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/brand_catalog.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tmall_scrape/Tmal_store_scrap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tmall_scrape/Tmal_store_scrap.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/data_report$plot_1.coverage" NAME="plot_1 Coverage Results" MODIFIED="1559374499423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_report$Tmall.coverage" NAME="Tmall Coverage Results" MODIFIED="1559277150950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/data_report$plot_1.coverage" NAME="plot_1 Coverage Results" MODIFIED="1559374499423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,7 +47,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -62,6 +58,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,16 +145,17 @@
       <workItem from="1559276002331" duration="1545000" />
       <workItem from="1559277562630" duration="600000" />
       <workItem from="1559357865708" duration="6180000" />
+      <workItem from="1559475855108" duration="68000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16345000" />
+    <option name="totallyTimeSpent" value="16413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08532934" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08646113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -176,7 +174,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.4311377" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.43096516" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -215,7 +213,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/anaconda/envs/dataServer/Lib/site-packages/xlrd/__init__.py">
+    <entry file="file://D:/Anaconda/envs/dataServer/Lib/site-packages/xlrd/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="110" selection-start-line="110" selection-end-line="110" />
