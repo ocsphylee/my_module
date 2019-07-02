@@ -3,18 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8b402d-6691-46cd-b055-f2be11484d08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Tmall_scrape/Tmal_store_scrap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tmall_scrape/Tmal_store_scrap.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/clean_data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clean_data.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JD/2019-04-01bubble_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JD/2019-05-01bubble_data_JD.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/JD/2019-05-01bubble_data_JD.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JD/JD_brands.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/JD/JD_brands.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JD/JD_cat_pop.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JD/JD_cat_self.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JD/JD_cats.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/JD/JD_cats.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tmall.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tmall.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tmall/2019-04-01bubble_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall/2019-04-01bubble_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tmall/2019-04-01bubble_data_T.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tmall/2019-05-01bubble_data_Tmall.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall/2019-05-01bubble_data_Tmall.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tmall/Tmall_brand.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Tmall/Tmall_brand.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tmall/Tmall_cat.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_report/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../data_report/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tmall/Tmall_cat .xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes/time-serise/.ipynb_checkpoints/Experiment Report-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/time-serise/.ipynb_checkpoints/Experiment Report-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../notes/time-serise/Experiment Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../notes/time-serise/Experiment Report.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +26,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/clean_data$Tmall.coverage" NAME="Tmall Coverage Results" MODIFIED="1561114174409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/clean_data$plot_1.coverage" NAME="plot_1 Coverage Results" MODIFIED="1561283275080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/clean_data$cleandata.coverage" NAME="cleandata Coverage Results" MODIFIED="1561789583677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/clean_data$Tmall.coverage" NAME="Tmall Coverage Results" MODIFIED="1561795528583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/clean_data$plot_1.coverage" NAME="plot_1 Coverage Results" MODIFIED="1561969920864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,25 +46,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tmall.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="250" selection-start-line="250" selection-end-line="250" />
+            <state relative-caret-position="296">
+              <caret line="288" column="18" lean-forward="true" selection-start-line="288" selection-start-column="18" selection-end-line="288" selection-end-column="18" />
               <folding>
-                <element signature="e#40#51#0" expanded="true" />
+                <element signature="e#41#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plot_1.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cleandata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="315">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding>
-                <element signature="e#84#103#0" expanded="true" />
+                <element signature="e#62#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,14 +72,22 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Tmall.py" />
         <option value="$PROJECT_DIR$/plot_1.py" />
+        <option value="$PROJECT_DIR$/cleandata.py" />
+        <option value="$PROJECT_DIR$/Tmall.py" />
       </list>
     </option>
   </component>
@@ -91,7 +103,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +114,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -123,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plot_1">
+  <component name="RunManager" selected="Python.cleandata">
     <configuration name="Tmall" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clean_data" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,6 +180,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="cleandata" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="clean_data" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cleandata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="plot_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clean_data" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,6 +223,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cleandata" />
         <item itemvalue="Python.plot_1" />
         <item itemvalue="Python.Tmall" />
       </list>
@@ -212,22 +244,25 @@
       <workItem from="1560915510603" duration="3475000" />
       <workItem from="1561110534379" duration="3681000" />
       <workItem from="1561278414115" duration="4167000" />
+      <workItem from="1561785746173" duration="9539000" />
+      <workItem from="1561950600564" duration="1499000" />
+      <workItem from="1561969678799" duration="4503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23017000" />
+    <option name="totallyTimeSpent" value="38558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11930295" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123324394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20254958" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27478755" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -236,12 +271,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.23087819" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.36260623" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.4973357" side_tool="true" visible="true" weight="0.3994638" />
-      <window_info anchor="right" id="Database" order="4" sideWeight="0.4991119" weight="0.3297587" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.5044405" side_tool="true" visible="true" weight="0.30563003" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.4955595" weight="0.3297587" />
       <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="5" sideWeight="0.5026643" side_tool="true" weight="0.121983916" />
     </layout>
   </component>
@@ -249,22 +284,60 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tmall.py">
+    <entry file="file://D:/Anaconda/envs/dataServer/Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="250" selection-start-line="250" selection-end-line="250" />
-          <folding>
-            <element signature="e#40#51#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="496">
+          <caret line="385" column="29" selection-start-line="385" selection-start-column="29" selection-end-line="385" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tmall.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tmall_scrape/Tmal_store_scrap.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tmall_scrape/T_store_scrap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plot_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="930">
+          <caret line="68" column="90" selection-start-line="68" selection-start-column="90" selection-end-line="68" selection-end-column="90" />
           <folding>
             <element signature="e#84#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cleandata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="e#62#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tmall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="288" column="18" lean-forward="true" selection-start-line="288" selection-start-column="18" selection-end-line="288" selection-end-column="18" />
+          <folding>
+            <element signature="e#41#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

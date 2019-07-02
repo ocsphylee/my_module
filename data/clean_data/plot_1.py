@@ -65,8 +65,8 @@ if __name__ == '__main__':
     filename = "2019-05-01bubble_data_Tmall"
 
     # plot
-    name = '美妆个护'
-    bubles(path + filename + ".xlsx",sheet = name, modify=0.0005, fontsize=15,xlim=(-0.25,3),ylim=(-100,570))
+    name = '平台'
+    bubles(path + filename + ".xlsx",sheet = name, modify=0.03, fontsize=15,xlim=(-0.25,21),ylim=(-110,800))
     plt.savefig(path + '5月\\' + filename + name +'.png', dpi=300)
     plt.show()
 
