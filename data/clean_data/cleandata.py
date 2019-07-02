@@ -59,8 +59,11 @@ class DFData():
 unit = 100000000
 JD = DFData("./JD/JD_brands.xlsx", index='dt', groupby=['dt', 'main_brand_name'], unit=unit)
 TM = DFData("./Tmall/Tmall_brand.xlsx", index='dt', groupby=['dt', 'main_brand_name'], unit=unit)
+gmv = JD.gmv+ TM.gmv
+gmv = gmv.dropna(axis=1,how='any')
+brand = ['九阳','科沃斯','美的','苏泊尔','飞科']
 
-print(JD.gmv['飞科']+ TM.gmv['格力'])
+print(gmv[brand])
 
 
 

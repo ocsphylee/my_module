@@ -2,7 +2,6 @@
 # coding: utf-8
 
 
-
 import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
@@ -14,6 +13,7 @@ class DFData():
     """
     读取和保存数据
     """
+
     def __init__(self, path, unit=1, index=None, groupby=None):
 
         data = pd.read_excel(path, index_col=index)
@@ -26,10 +26,12 @@ class DFData():
         self.atv = self.gmv / self.sales
 
         if 'source' in data.columns and "cat" in path:
-            groupby.insert(1,'source')
+            groupby.insert(1, 'source')
             self.cid_data = data.groupby(groupby).sum()
-            self.pop_gmv = self.cid_data.loc[(slice(None),'pop'),'gmv'].unstack().reset_index(level='source',drop=True)
-            self.self_gmv = self.cid_data.loc[(slice(None), 'self'), 'gmv'].unstack().reset_index(level='source',drop=True)
+            self.pop_gmv = self.cid_data.loc[(slice(None), 'pop'), 'gmv'].unstack(
+            ).reset_index(level='source', drop=True)
+            self.self_gmv = self.cid_data.loc[(slice(None), 'self'), 'gmv'].unstack(
+            ).reset_index(level='source', drop=True)
         else:
             self.cid_data = None
             self.pop_gmv = None
@@ -162,9 +164,6 @@ def save_cat_sheet(df, path, name):
     writer.close()
 
 
-
-
-
 def save_brand(cat, path, cat_path, gmv, sales, atv, gmv_g, sales_g, atv_g):
     '''保存品牌数据
     input: cat（str）: 需要整理的品类的名称
@@ -197,13 +196,24 @@ def save_brand(cat, path, cat_path, gmv, sales, atv, gmv_g, sales_g, atv_g):
     writer.save()
     writer.close()
 
-def format_data(cat,brand,brand_path, cat_path,cat_name_path,bubblepath,catlist,plat,date,unit):
+
+def format_data(
+        cat,
+        brand,
+        brand_path,
+        cat_path,
+        cat_name_path,
+        bubblepath,
+        catlist,
+        plat,
+        date,
+        unit):
 
     print("----导入数据----")
 
     # 2. 计算增长率
     gmv_g = yoy_growth(brand.gmv, "M")
-    sales_g= yoy_growth(brand.sales, "M")
+    sales_g = yoy_growth(brand.sales, "M")
     atv_g = yoy_growth(brand.atv, "M")
     print("----增长率----")
 
@@ -242,12 +252,13 @@ def format_data(cat,brand,brand_path, cat_path,cat_name_path,bubblepath,catlist,
         plat)
     print("----完成----")
 
+
 # * 运行
 if __name__ == '__main__':
 
     unit = 100000000
     date = '2019-05-01'
-    #Tmall
+    # Tmall
     print("----------Tmall------------")
     brand_path_T = "./Tmall/Tmall_brand.xlsx"
     cat_path_T = './Tmall/Tmall_cat.xlsx'
@@ -256,11 +267,33 @@ if __name__ == '__main__':
     bubblepath_T = 'bubble_data_Tmall.xlsx'
     plat_T = "./Tmall/"
 
-    T_cat = DFData(cat_path_T, index='dt', groupby=['dt', 'cid1_name'], unit=unit)
-    T_brand = DFData(brand_path_T, index='dt', groupby=['dt', 'main_brand_name'], unit=unit)
-    format_data(T_cat,T_brand,brand_path_T, cat_path_T, cat_name_path_T, bubblepath_T, catlist_T, plat_T, date, unit)
+    T_cat = DFData(
+        cat_path_T,
+        index='dt',
+        groupby=[
+            'dt',
+            'cid1_name'],
+        unit=unit)
+    T_brand = DFData(
+        brand_path_T,
+        index='dt',
+        groupby=[
+            'dt',
+            'main_brand_name'],
+        unit=unit)
+    format_data(
+        T_cat,
+        T_brand,
+        brand_path_T,
+        cat_path_T,
+        cat_name_path_T,
+        bubblepath_T,
+        catlist_T,
+        plat_T,
+        date,
+        unit)
 
-    #JD
+    # JD
     print("----------JD------------")
     catlist_J = ['医药保健', '酒类', '大家电', '小家电', '食品饮料及生鲜']
     brand_path_J = "./JD/JD_brands.xlsx"
@@ -269,21 +302,50 @@ if __name__ == '__main__':
     bubblepath_J = 'bubble_data_JD.xlsx'
     plat_J = "./JD/"
 
-    J_cat = DFData(cat_path_J, index='dt', groupby=['dt', 'cid1_name'], unit=unit)
-    J_brand = DFData(brand_path_J, index='dt', groupby=['dt', 'main_brand_name'], unit=unit)
-    format_data(J_cat,J_brand,brand_path_J, cat_path_J, cat_name_path_J, bubblepath_J, catlist_J, plat_J,date,unit)
+    J_cat = DFData(
+        cat_path_J,
+        index='dt',
+        groupby=[
+            'dt',
+            'cid1_name'],
+        unit=unit)
+    J_brand = DFData(
+        brand_path_J,
+        index='dt',
+        groupby=[
+            'dt',
+            'main_brand_name'],
+        unit=unit)
+    format_data(
+        J_cat,
+        J_brand,
+        brand_path_J,
+        cat_path_J,
+        cat_name_path_J,
+        bubblepath_J,
+        catlist_J,
+        plat_J,
+        date,
+        unit)
 
     # 加总
     catlist_total = ['酒类', '大家电', '小家电']
-    gmv =
+    gmv = J_brand.gmv + T_brand.gmv
+    gmv = gmv.dropna(axis=1, how='any')
+    sale = J_brand.sales + T_brand.sales
+    sale = sale.dropna(axis=1, how='any')
+    atv = gmv / sale
+    gmv_g = yoy_growth(gmv, "M")
+    sales_g = yoy_growth(sale, "M")
+    atv_g = yoy_growth(atv, "M")
     for cat_name in catlist_total:
         save_brand(
             cat_name,
             './total_brand.xlsx',
             cat_name_path_T,
-            brand.gmv,
-            brand.sales,
-            brand.atv,
+            gmv,
+            sale,
+            atv,
             gmv_g,
             sales_g,
             atv_g)
